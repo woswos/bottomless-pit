@@ -1,0 +1,21 @@
+{
+
+  "manifest_version": 2,
+  "name": "Borderify",
+  "version": "1.0",
+
+  "description": "Adds a red border to all webpages matching mozilla.org. Icon taken fron https://www.flaticon.com/free-icon/menu_325051?term=red%20square&page=1&position=2",
+
+  "icons": {
+    "48": "icons/icon.png",
+    "96": "icons/icon.png"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://*.google.com/*"],
+      "js": ["borderify.js"]
+    }
+  ]
+
+}
