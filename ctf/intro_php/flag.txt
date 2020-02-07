@@ -1,0 +1,1 @@
+flag{PHP_d0esnt_alw@ys_s33m_s0_sane...}
