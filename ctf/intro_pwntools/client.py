@@ -1,5 +1,7 @@
 #!/usr/bin/env python
 import sys
+import re
+
 try:
     from pwn import *
 except ImportError:
@@ -9,7 +11,26 @@ except ImportError:
 
 def processResponse(data):
     # I guess we should do something with this data and send it back!
-    return
+
+    nums = re.findall("\d+", data)
+
+    nums[0] = int(nums[0])
+    nums[1] = int(nums[1])
+
+    if data.find("//") != -1:
+        ans = nums[0] / nums[1]
+
+    elif data.find("*") != -1:
+        ans = nums[0] * nums[1]
+
+    elif data.find("-") != -1:
+        ans = nums[0] - nums[1]
+
+    elif data.find("+") != -1:
+        ans = nums[0] + nums[1]
+
+    return str(ans)
+
 
 def pwn(address, port):
     connection = remote(address, port)
@@ -36,4 +57,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-

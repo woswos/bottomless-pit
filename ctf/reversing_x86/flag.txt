@@ -1,0 +1,22 @@
+➜  ~ nc recruit.osiris.cyber.nyu.edu 8004
+
+Welcome!
+
+What is the value of dh after line 129 executes? (Answer with a one-byte hex value, prefixed with '0x')
+0x00
+
+What is the value of gs after line 145 executes? (Answer with a one-byte hex value, prefixed with '0x')
+0x00
+
+What is the value of ax after line 169 executes? (Answer with a two-byte hex value, prefixed with '0x')
+0x0e74
+
+What is the value of ax after line 199 executes for the first time? (Answer with a two-byte hex value, prefixed with '0x')
+0x0e61
+
+If the value of bp at line 313 is 0x9000 what is the value of bp after line 335 executes? (Answer with a two-byte hex value, prefixed with '0x')
+0x9000
+
+If the value of sp at line 313 is 0xaaaa what is the value of sp after line 335 executes? (Answer with a two-byte hex value, prefixed with '0x')
+0xaaa0
+flag{reee3333eeally_g0od_job_s0lv1ng_yOUr_fIr5t_rev_reee33334ee333333eecruit!!}
